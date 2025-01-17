@@ -72,11 +72,11 @@ class PropertyAccessor implements PropertyAccessorInterface
      * Should not be used by application code. Use
      * {@link PropertyAccess::createPropertyAccessor()} instead.
      *
-     * @param int $magicMethods A bitwise combination of the MAGIC_* constants
-     *                          to specify the allowed magic methods (__get, __set, __call)
-     *                          or self::DISALLOW_MAGIC_METHODS for none
-     * @param int $throw        A bitwise combination of the THROW_* constants
-     *                          to specify when exceptions should be thrown
+     * @param int $magicMethodsFlags A bitwise combination of the MAGIC_* constants
+     *                               to specify the allowed magic methods (__get, __set, __call)
+     *                               or self::DISALLOW_MAGIC_METHODS for none
+     * @param int $throw             A bitwise combination of the THROW_* constants
+     *                               to specify when exceptions should be thrown
      */
     public function __construct(
         private int $magicMethodsFlags = self::MAGIC_GET | self::MAGIC_SET,
